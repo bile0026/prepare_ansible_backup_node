@@ -1,0 +1,25 @@
+---
+# tasks file for prepare_ansible_backup_node
+
+- name: Ensure package dependencies are installed
+  package:
+    name:
+      - vim
+      - diffutils
+    state: present
+  delegate_to: localhost
+  become: true
+
+- name: Create {{ current_date }} folders for configs
+  file:
+    path: /ansible_backups/{{ item }}/{{ current_date }}
+    state: directory
+    mode: 0755
+  with_items: platforms
+
+- name: Create {{ current_date }} folders for diffs
+  file:
+    path: /ansible_backups/{{ item }}_diffs/{{ current_date }}
+    state: directory
+    mode: 0755
+  with_items: platforms
