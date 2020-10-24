@@ -1,6 +1,6 @@
 ---
 - name: Prepare Ansible Network Backup Node
-  hosts: reachable
+  hosts: all
   gather_facts: false
   roles:
     - prepare_ansible_backup_node
