@@ -14,7 +14,7 @@
   file:
     path: /ansible_backups/{{ item }}/{{ current_date }}
     state: directory
-    mode: 0755
+    mode: 0775
     owner: awx
     group: awx
   with_items: "{{ platforms }}"
@@ -23,7 +23,7 @@
   file:
     path: /ansible_backups/{{ item }}_diffs/{{ current_date }}
     state: directory
-    mode: 0755
+    mode: 0775
     owner: awx
     group: awx
   with_items: "{{ platforms }}"
