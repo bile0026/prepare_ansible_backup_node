@@ -18,6 +18,7 @@
     owner: awx
     group: awx
   with_items: "{{ platforms }}"
+  become: True
 
 - name: Create {{ current_date }} folders for diffs
   file:
@@ -27,3 +28,4 @@
     owner: awx
     group: awx
   with_items: "{{ platforms }}"
+  become: True
