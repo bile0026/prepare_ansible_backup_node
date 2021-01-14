@@ -6,6 +6,7 @@
     name:
       - vim
       - diffutils
+      - sshpass
     state: present
   delegate_to: localhost
   become: true
