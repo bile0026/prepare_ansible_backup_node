@@ -8,7 +8,6 @@
       - diffutils
       - sshpass
       - traceroute
-      - tracepath
     state: present
   delegate_to: localhost
   become: true
