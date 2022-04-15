@@ -10,7 +10,7 @@
       - traceroute
       - python3-lxml
     state: present
-  delegate_to: localhost
+  #delegate_to: localhost
   become: true
 
 - name: Create {{ current_date }} folders for configs
