@@ -9,6 +9,7 @@
       - sshpass
       - traceroute
       - python3-lxml
+      - python3-paramiko
     state: present
   #delegate_to: localhost
   become: true
